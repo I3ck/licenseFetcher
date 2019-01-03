@@ -1,7 +1,15 @@
-module LicenseFetcher where
+module LicenseFetcher
+  ( Package(..)
+  , Version(..)
+  , License(..)
+  , Directory(..)
+  
+  , fetch
+  , fetchStore
+  ) where
 
-import Network.HTTP     (simpleHTTP, getRequest, getResponseBody)
-import System.Directory (withCurrentDirectory)
+import Network.HTTP        (simpleHTTP, getRequest, getResponseBody)
+import System.Directory    (withCurrentDirectory)
 
 --------------------------------------------------------------------------------
 
